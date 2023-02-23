@@ -25,7 +25,9 @@ li > img {
 li {
     line-height: 30px;
 }
-
+.flex {
+    display: flex;
+}
 
 /* WRAPPER CONTAINER SETTING */
 .wrapper {
@@ -34,7 +36,7 @@ li {
 }
 
 .main {
-    height: 90vh;
+    height: calc(100vh - 100px);
     display: flex;
     /* DEBUG */
     background-color: aqua;
@@ -48,9 +50,9 @@ li {
 }
 
 .footer {
-    height: 10vh;
+    height: 100px;
     /* DEBUG */
-    background-color: red;
+    background-color: #282828;
 }
 /* END CONTAINER SETTING */
 
@@ -62,22 +64,36 @@ li {
     z-index: 1;
     width: calc(100% - 250px);
     height: 100px;
+    text-align: right;
+    line-height: 100px;
     /* DEBUG */
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.button-fix {
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    border: 1px solid white;
+    border-radius: 40px;
+    margin-right: 20px;
 }
 
 .side-bar {
     flex-shrink: 0;
     width: 250px;
     background-color: #000000;
-    color: white;
 }
+
 
 .main-content {
     height: 100%;
     width: 100%;
-    padding-top: 100px;
-    background-color: yellow;
+    padding-top: 120px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #141922;
+    overflow-y: auto;
+    color: #A3A3A3;
 
 }
 
@@ -119,11 +135,100 @@ li {
     margin-right: 10px;
     margin-top: 0px;
 }
+.side-foot i {
+    margin-right: 10px;
+}
 .side-foot p  {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .side-foot:last-child {
+    color: white;
+}
+
+/* END SIDE BAR */
+
+/* MAIN */
+.main-content * {
+    padding-top: 15px;
+}
+.main-content h4, h2 {
+    color: white;
+}
+.categories {
+    text-align: center;
+}
+
+.categories span {
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.col {
+    margin-right: 15px;
+    width: calc(100% / 6 - 15px);
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+
+/* END MAIN */
+
+/* START FOOTER */
+.footer * {
+    color: white;
+    padding: 5px;
+}
+
+.footer p {
+    font-size: .7rem;
+    padding-top: 0px;
+}
+
+.footer i {
+    color: #A3A3A3;
+}
+.player-bar {
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-foot {
+    align-items: center;
+}
+
+.left-foot img {
+    width: 50px;
+}
+.right-foot i {
+    font-size: .8rem;
+}
+.sound {
+    width: 100px;
+    height: .1px;
+    border: 2px solid white;
+    border-radius: 40px;
+    display: inline-block;
+    padding: 0px;
+}
+
+.slider {
+  width: 600px; 
+  height: 25px; 
+  background: #d3d3d3; 
+}
+.mid-top {
+    text-align: center;
+}
+.footer .mid-foot i {
     color: white;
 }
