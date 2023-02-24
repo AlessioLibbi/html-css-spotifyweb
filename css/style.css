@@ -11,12 +11,36 @@ body {
 img {
     max-width: 100%;
 }
+img:hover {
+    opacity: 0.5; 
+  }
 ul {
     list-style: none;
 }
-
-
-
+i:hover {
+    transform: scale(2); 
+}
+.img-container {
+    position: relative;
+}
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.img-container:hover .play-icon {
+    opacity: 1;
+}
+.fa-circle-play {
+    font-size: 50px;
+    color: white;
+}  
+#nopad {
+    padding-top: 0px;
+}
 li > img {
     width: 20px;
     vertical-align: middle;
@@ -51,7 +75,6 @@ li {
 
 .footer {
     height: 100px;
-    /* DEBUG */
     background-color: #282828;
 }
 /* END CONTAINER SETTING */
@@ -66,7 +89,6 @@ li {
     height: 100px;
     text-align: right;
     line-height: 100px;
-    /* DEBUG */
     background-color: rgba(0, 0, 0, 0.6);
 }
 .button-fix {
@@ -77,6 +99,7 @@ li {
     border-radius: 40px;
     margin-right: 20px;
 }
+
 
 .side-bar {
     flex-shrink: 0;
@@ -109,6 +132,9 @@ li {
 .logo {
     width: 60%;
     margin-bottom: 20px;
+}
+.logo-small {
+    display: none;
 }
 .playlist {
     flex-grow: 1;
@@ -194,7 +220,7 @@ li {
 
 .footer * {
     color: white;
-    padding: 5px;
+    padding: 0px 5px;
 }
 
 .footer p {
@@ -213,8 +239,7 @@ li {
 
 .left-foot {
     align-items: center;
-    width: 250px;
-    justify-content: space-between;
+    width: 25%;
 }
 .mid-foot {
     width: 50%;
@@ -236,9 +261,12 @@ li {
 }
 
 .slider {
-  width: 600px; 
+  width: 80%; 
   height: 25px; 
   background: #d3d3d3; 
+}
+.slider-right {
+    width: 50%;
 }
 .mid-top {
     text-align: center;
@@ -252,7 +280,7 @@ li {
     justify-content: center;
 }
 .right-foot {
-    width: 300px;
+    width: 25%;
     display: flex;
     justify-content: flex-end;
 }
@@ -268,5 +296,39 @@ li {
 @media screen and (max-width:700px) {
     .col {
         width: calc(100% / 2 - 15px);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .side-bar span {
+        display: none;
+    }
+    .playlist {
+        display: none;
+    }
+   .side-bar {
+    justify-content: space-between;
+    }
+    .side-bar hr {
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+    .logo-small {
+        display: block;
+        width: 20px;
+    }
+    .side-foot p {
+        text-align: center;
+    }
+    .side-bar {
+        width: 60px;
+    }
+    .up-fix {
+        width: calc(100% - 60px);
+    }
+    .footer * {
+        padding: 1px;
     }
 }
